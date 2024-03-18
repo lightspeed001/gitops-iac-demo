@@ -1,7 +1,7 @@
 name: IaC Deployment
 env:  
   PREFIX: ypopsdemo
-  REGION: westeurope
+  REGION: eastus
   CHECKS: CKV_AZURE_5
 # Controls when the action will run. 
 on:

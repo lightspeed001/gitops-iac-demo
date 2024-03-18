@@ -16,7 +16,7 @@ param acrSku string = 'Basic'
 @description('Managed identity object id')
 param manageidObjId string
 
-resource acrResource 'Microsoft.ContainerRegistry/registries@2022-02-01-preview' = {
+resource acrResource 'Microsoft.ContainerRegistry/registries@2023-01-01-preview' = {
   name: acrName
   location: location
   sku: {

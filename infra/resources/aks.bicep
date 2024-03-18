@@ -23,11 +23,11 @@ param logAnalyticId string = ''
 @description('Managed identity name')
 param managedIdentityName string
 
-resource managedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2022-01-31-preview' existing = {
+resource managedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' existing = {
   name: managedIdentityName
 }
 
-resource controlplanemanagedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2022-01-31-preview' = {
+resource controlplanemanagedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
   name: '${managedIdentityName}-cp'
   location: location
 }
@@ -44,7 +44,7 @@ resource  managedIDentityOperatorRAssignment 'Microsoft.Authorization/roleAssign
   }
 }
 
-resource akscluster 'Microsoft.ContainerService/managedClusters@2022-09-02-preview' = {
+resource akscluster 'Microsoft.ContainerService/managedClusters@2024-01-02-preview' = {
   name: clusterName
   location: location  
   identity: {
